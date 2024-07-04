@@ -5,7 +5,7 @@ type TContainerProps = {
 };
 
 const Container = ({ children }: TContainerProps) => {
-  return <div className="bg-red-500">{children}</div>;
+  return <div className="h-screen w-full max-w-7xl mx-auto">{children}</div>;
 };
 
 export default Container;
