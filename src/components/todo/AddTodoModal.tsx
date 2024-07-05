@@ -11,7 +11,7 @@ import { Label } from "@radix-ui/react-dropdown-menu";
 import { Input } from "../ui/input";
 import { useState } from "react";
 import { DialogClose } from "@radix-ui/react-dialog";
-import { useAppDispatch } from "../../redux/hook";
+import { useAppDispatch, useAppSelector } from "../../redux/hook";
 import { addTodo } from "../../redux/features/todoSlice";
 
 const AddTodoModal = () => {
@@ -22,7 +22,10 @@ const AddTodoModal = () => {
   const onSubmit = (e: FromEvent) => {
     e.preventDefault();
 
+    const randomString = Math.random().toString(36).substring(2, 7);
+
     const taskDetails = {
+      id: randomString,
       title: task,
       description: description,
     };
