@@ -15,15 +15,17 @@ const TodoFilter = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button>Filter</Button>
+        <Button className="bg-primary-gradient text-xl font-semibold">
+          Filter
+        </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
-        <DropdownMenuLabel>Panel Position</DropdownMenuLabel>
+        <DropdownMenuLabel>Filter by priority</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
-          <DropdownMenuRadioItem value="top">Top</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="bottom">Bottom</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="right">Right</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="top">High</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="bottom">Medium</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="right">Low</DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>
       </DropdownMenuContent>
     </DropdownMenu>
